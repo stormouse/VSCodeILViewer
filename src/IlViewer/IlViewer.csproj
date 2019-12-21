@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DebugType>portable</DebugType>
+    <AssemblyName>ilViewer.Console</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>IlViewer</PackageId>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <RuntimeFrameworkVersion>2.1.14</RuntimeFrameworkVersion>
+  </PropertyGroup>
+
+</Project>
