@@ -19,10 +19,16 @@ export function activate(context: vscode.ExtensionContext) {
     logger.append("Executing activate");
 
     let invokationDisposable = vscode.commands.registerCommand('extension.showIlWindow', () => {
-        return vscode.commands.executeCommand('vscode.previewHtml', ilWindowUri, vscode.ViewColumn.Two, 'IL Viewer').then((success) => {
-        }, (reason) => {
-            vscode.window.showErrorMessage("There's been an error: " + reason);
-        });
+        const panel = vscode.window.createWebviewPanel(
+            'IlViewer',
+            ilWindowUri,
+            vscode.ViewColumn.Two,
+            {}
+        );
+        // return vscode.commands.executeCommand('vscode.previewHtml', ilWindowUri, vscode.ViewColumn.Two, 'IL Viewer').then((success) => {
+        // }, (reason) => {
+        //     vscode.window.showErrorMessage("There's been an error: " + reason);
+        // });
     });
     disposables.push(invokationDisposable);
 
